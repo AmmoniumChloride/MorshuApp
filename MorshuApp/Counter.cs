@@ -4,7 +4,7 @@ using System.Globalization;
 
 namespace MorshuApp
 {
-    class Counter : ObservableObject
+	class Counter : ObservableObject
 	{
 		private double input;
 		private double result;
@@ -29,7 +29,7 @@ namespace MorshuApp
 							break;
 						default:
 							Message = "Барыга ты ёбаная";
-                            break;
+							break;
 					}
 					if (parsed < 0) Message = "А там точно минус?..";
 				}
@@ -39,8 +39,8 @@ namespace MorshuApp
 					OnPropertyChanged(nameof(Input));
 					Result = input * coefficient;
 				}
-                else
-                {
+				else
+				{
 					switch (value.ToLower())
 					{
 						case "sakagami":
@@ -77,17 +77,17 @@ namespace MorshuApp
 			get => result;
 			set
 			{
-                if (result != value)
-                {
-                    result = value;
-                    OnPropertyChanged(nameof(Result));
-                }
-            }
+				if (result != value)
+				{
+					result = value;
+					OnPropertyChanged(nameof(Result));
+				}
+			}
 		}
 
 		public string Message
 		{
-            get => message;
+			get => message;
 			set
 			{
 				if (message != value)

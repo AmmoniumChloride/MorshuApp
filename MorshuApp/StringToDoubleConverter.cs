@@ -4,7 +4,7 @@ using System.Windows.Data;
 
 namespace MorshuApp
 {
-    class StringToDoubleConverter : IValueConverter
+	class StringToDoubleConverter : IValueConverter
 	{
 		public object Convert(object value, Type targetType, object parameter, CultureInfo culture)
 		{
